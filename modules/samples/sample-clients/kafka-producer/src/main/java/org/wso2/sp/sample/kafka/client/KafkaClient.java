@@ -126,6 +126,8 @@ public class KafkaClient {
         Thread.sleep(2000);
         String[] sweetName = {"Cupcake", "Donut", "Eclair", "Froyo", "Gingerbread", "Honeycomb", "Ice",
                               "Cream Sandwich", "Jelly Bean", "KitKat", "Lollipop", "Marshmallow"};
+        EventSendingUtil.publishEvents(fileEntriesList, sendEventsContinuously, noOfEventsToSend, eventDefinition,
+                sweetName, sweetProductionStream, delay, isBinaryMessage, continuouslyReadFile);
 
         Thread.sleep(2000);
         siddhiAppRuntime.shutdown();
