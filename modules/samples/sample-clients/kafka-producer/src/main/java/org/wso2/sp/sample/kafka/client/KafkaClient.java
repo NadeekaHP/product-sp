@@ -124,10 +124,9 @@ public class KafkaClient {
         siddhiAppRuntime.start();
         sweetProductionStream = siddhiAppRuntime.getInputHandler("SweetProductionStream");
         Thread.sleep(2000);
-        String[] sweetName = {"Cupcake", "Donut", "Éclair", "Froyo", "Gingerbread", "Honeycomb", "Ice",
+        String[] sweetName = {"Cupcake", "Donut", "Eclair", "Froyo", "Gingerbread", "Honeycomb", "Ice",
                               "Cream Sandwich", "Jelly Bean", "KitKat", "Lollipop", "Marshmallow"};
-        EventSendingUtil.publishEvents(fileEntriesList, sendEventsContinuously, noOfEventsToSend, eventDefinition,
-                                       sweetName, sweetProductionStream, delay, isBinaryMessage, continuouslyReadFile);
+
         Thread.sleep(2000);
         siddhiAppRuntime.shutdown();
         Thread.sleep(2000);
